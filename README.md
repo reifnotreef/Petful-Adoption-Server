@@ -1,6 +1,20 @@
-# Express Boilerplate!
+# Petful Server
 
-This is a boilerplate project used for starting new projects!
+API Documentation:
+
+    API BASE URL: {insert-url}/api
+
+- GET /pets/cats
+- GET /pets/dogs
+- GET /users
+- POST /pets/cats
+- POST /pets/dogs
+- POST /users
+- DELETE /pets/cats
+- DELETE /pets/dogs
+- DELETE /users
+
+Built w/ Node.js
 
 ## How do set up?
 
