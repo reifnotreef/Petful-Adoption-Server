@@ -25,8 +25,8 @@ usersRouter
     res.status(201).json(insertedUser);
   })
   .delete((req, res) => {
-    let deletedUser = UsersService.deleteUser();
-    res.status(204);
+    UsersService.deleteUser();
+    res.send(204);
   });
 
 module.exports = usersRouter;
