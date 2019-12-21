@@ -11,7 +11,7 @@ const UsersService = {
     return array;
   },
   insertUser(newUser) {
-    users.enqueue(newPet);
+    users.enqueue(newUser);
   },
   deleteUser() {
     users.dequeue();

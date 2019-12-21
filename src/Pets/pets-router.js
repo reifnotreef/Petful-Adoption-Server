@@ -28,12 +28,12 @@ petsRouter
         });
       }
     }
-    let insertedCat = PetsService.insertCat(newCat);
-    res.status(201).json(insertedCat);
+    PetsService.insertCat(newCat);
+    res.send(201);
   })
   .delete((req, res) => {
     let deletedCat = PetsService.deleteCat();
-    res.status(204).json(deletedCat);
+    res.send(204);
   });
 
 petsRouter
@@ -59,12 +59,12 @@ petsRouter
         });
       }
     }
-    let insertedDog = PetsService.insertDog(newDog);
-    res.status(201).json(insertedDog);
+    PetsService.insertDog(newDog);
+    res.send(201);
   })
   .delete((req, res, next) => {
-    let deletedDog = PetsService.deleteDog();
-    res.status(204).json(deletedDog);
+    PetsService.deleteDog();
+    res.send(204);
   });
 
 module.exports = petsRouter;

@@ -12,17 +12,20 @@ usersRouter
     res.json(users);
   })
   .post(jsonParser, (req, res) => {
+    // console.log(req);
     const { name } = req.body;
     const newUser = { name };
-    for (const [key, value] of Object.entries(newUser)) {
-      if (value === null) {
-        return res.status(400).json({
-          error: `Missing '${key} in request body`
-        });
-      }
-    }
-    let insertedUser = UsersService.insertUsers(newUser);
-    res.status(201).json(insertedUser);
+    console.log(newUser);
+    UsersService.insertUser(newUser);
+    // for (const [key, value] of Object.entries(newUser)) {
+    //   if (value === null) {
+    //     return res.status(400).json({
+    //       error: `Missing '${key} in request body`
+    //     });
+    //   }
+    // }
+    console.log(UsersService.getUsers());
+    res.status(201).send(UsersService.getUsers());
   })
   .delete((req, res) => {
     UsersService.deleteUser();
