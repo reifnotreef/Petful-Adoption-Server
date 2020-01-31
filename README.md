@@ -1,5 +1,7 @@
 # Petful Server
 
+Contributors: Bridger Reif Hammond and Adam Newhouser
+
 API Documentation:
 
     API BASE URL: {insert-url}/api
